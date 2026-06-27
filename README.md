@@ -1,13 +1,23 @@
-# 🎓 CPA 注册会计师 Skill（零基础 · 中文为主）
+<div align="center">
 
-<p align="center">
-  <img alt="Type" src="https://img.shields.io/badge/Claude-Skill-D97757?style=flat-square&logo=anthropic&logoColor=white">
-  <img alt="Exam" src="https://img.shields.io/badge/CPA-2026-2E7D32?style=flat-square">
-  <img alt="Subjects" src="https://img.shields.io/badge/专业阶段-6科+综合-1565C0?style=flat-square">
-  <img alt="Audience" src="https://img.shields.io/badge/定位-零基础友好-7B1FA2?style=flat-square">
-  <img alt="Language" src="https://img.shields.io/badge/语言-中文为主·术语标英-455A64?style=flat-square">
-  <img alt="License" src="https://img.shields.io/badge/License-MIT-blue?style=flat-square">
-</p>
+# 🎓 CPA 注册会计师 Skill
+
+**零基础友好 · 中文为主 · 跨 AI 平台**
+
+*「把任意 AI 变成你的 CPA 私人辅导老师」*
+
+![Skill](https://img.shields.io/badge/Claude-Skill-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![CPA](https://img.shields.io/badge/CPA-2026-2E7D32?style=flat-square)
+![专业阶段](https://img.shields.io/badge/专业阶段-6科+综合-1565C0?style=flat-square)
+![定位](https://img.shields.io/badge/定位-零基础友好-7B1FA2?style=flat-square)
+![语言](https://img.shields.io/badge/语言-中文为主·术语标英-455A64?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+
+[部署](#-部署-deployment各-ai-工具) · [接入资料](#-上传你自己的学习资料-connect-your-own-materials可选强烈推荐) · [使用](#-使用方式-usage) · [其他 AI 工具](#-在其他-ai-工具上使用-use-on-other-ai-tools) · [真实示例](#-真实运行示例-live-examples) · [版权](#-版权声明-copyright请务必阅读)
+
+</div>
+
+---
 
 一个 [Claude](https://claude.com) **Skill（技能）**，把 Claude 变成一位针对 **2026 年注册会计师全国
 统一考试（CPA）** 的私人辅导老师，专为**财会/法律基础薄弱**的考生设计。它会：
