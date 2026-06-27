@@ -6,7 +6,7 @@
 
 *「把任意 AI 变成你的 CPA 私人辅导老师」*
 
-![Skill](https://img.shields.io/badge/Claude-Skill-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Skill](https://img.shields.io/badge/Skill-任意%20AI%20通用-D97757?style=flat-square)
 ![CPA](https://img.shields.io/badge/CPA-2026-2E7D32?style=flat-square)
 ![专业阶段](https://img.shields.io/badge/专业阶段-6科+综合-1565C0?style=flat-square)
 ![定位](https://img.shields.io/badge/定位-零基础友好-7B1FA2?style=flat-square)
@@ -19,7 +19,7 @@
 
 ---
 
-一个 [Claude](https://claude.com) **Skill（技能）**，把 Claude 变成一位针对 **2026 年注册会计师全国
+一个可装进**任意 AI 助手**的 **Skill（技能）**，把**任意 AI**变成一位针对 **2026 年注册会计师全国
 统一考试（CPA）** 的私人辅导老师，专为**财会/法律基础薄弱**的考生设计。它会：
 
 - 🧠 **通俗讲解难点**——用生活化类比和具体例子讲清概念，每个术语都解释，绝不用术语解释术语；
