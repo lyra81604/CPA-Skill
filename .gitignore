@@ -1,0 +1,13 @@
+# 用户自己上传的教材/讲义 —— 绝不提交。
+# corpus/ 是用户本地合法持有的 CPA 教材/讲义文本，每个用户在本地自行导入。
+corpus/*.txt
+
+# 源 Word/PDF 资料（可能含受版权保护的教材）
+*.docx
+*.pdf
+
+# 注意：syllabus/*.txt 是官方公开的 2026 CPA 考试大纲，随 skill 一起分发，不在忽略之列。
+
+# OS / 编辑器杂项
+.DS_Store
+Thumbs.db

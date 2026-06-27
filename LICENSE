@@ -1,0 +1,31 @@
+MIT License
+
+Copyright (c) 2026 iiamyyy66 (github: lyra81604, https://github.com/lyra81604/CPA-Skill)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+This license applies only to the original skill code and documentation in this
+repository (SKILL.md, README.md, references/, scripts/). The bundled exam
+syllabus under syllabus/ is the official, publicly released 2026 CPA exam
+outline (《2026 年注册会计师全国统一考试大纲》) published by the CICPA exam
+committee, redistributed here for reference. This license does NOT grant any
+rights to third-party study materials (e.g. textbooks, lecture notes, or
+prep-course handouts), which are the copyrighted property of their respective
+owners and must NOT be committed to or distributed through this repository.
+Users supply such materials themselves, locally, under corpus/.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
