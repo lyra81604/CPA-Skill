@@ -129,7 +129,7 @@ node scripts/docx-to-text.js "/path/to/你的税法讲义.docx" "corpus/tax-note
 ## 🌍 在其他 AI 工具上使用 Use on other AI tools
 
 不止 Claude——本技能的"大脑"是纯文本指令，可部署到 ChatGPT 自定义 GPT、Gemini Gem、Kimi / 豆包 /
-Coze 智能体、Cursor 等。见 [`portable/`](portable/)：
+Coze 智能体、**腾讯 Marvis（马维斯）**、Cursor 等。见 [`portable/`](portable/)：
 
 - 🧩 **`portable/SYSTEM_PROMPT.md`** — 自包含、工具中性的指令，直接粘进任意平台的"指令框 / 系统提示"。
 - 🛠️ **`portable/DEPLOY.md`** — 各平台部署步骤（指令放哪、你自己的资料怎么上传）。
