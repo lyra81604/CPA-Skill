@@ -50,7 +50,8 @@
 ## 🚀 部署 Deployment（各 AI 工具）
 
 这是一个标准的 **Agent Skill**，核心就是把整个 `cpa-tutor/` 文件夹放到对应工具能发现的位置。下面给出
-几种常见 Claude 工具的部署方式（具体 UI 以各产品最新版本为准）。
+几种常见 Claude 工具的部署方式（具体 UI 以各产品最新版本为准）。技能名是 `cpa-tutor`，仓库名是 `CPA-Skill`。
+部署时请将本仓库克隆或复制到 AI 工具的 skills 目录下，并将目标文件夹命名为 `cpa-tutor`。
 
 ### 💻 Claude Code（命令行）
 
