@@ -50,8 +50,42 @@
 ## 🚀 部署 Deployment（各 AI 工具）
 
 这是一个标准的 **Agent Skill**，核心就是把整个 `cpa-tutor/` 文件夹放到对应工具能发现的位置。下面给出
-几种常见 Claude 工具的部署方式（具体 UI 以各产品最新版本为准）。技能名是 `cpa-tutor`，仓库名是 `CPA-Skill`。
+Codex、Claude 等常见 AI 工具的部署方式（具体 UI 以各产品最新版本为准）。技能名是 `cpa-tutor`，仓库名是 `CPA-Skill`。
 部署时请将本仓库克隆或复制到 AI 工具的 skills 目录下，并将目标文件夹命名为 `cpa-tutor`。
+
+### 🤖 OpenAI Codex（App / CLI / IDE 扩展）
+
+可以直接使用。本仓库根目录包含带 `name` 和 `description` 元数据的 `SKILL.md`，并将脚本、参考资料和大纲
+放在同一个 skill 文件夹中，符合 Codex Agent Skill 的目录结构。Codex App、Codex CLI 和 IDE 扩展均支持 skills。
+
+个人安装推荐放到 `~/.agents/skills/cpa-tutor/`：
+
+**Windows PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.agents\skills"
+git clone https://github.com/lyra81604/CPA-Skill.git "$HOME\.agents\skills\cpa-tutor"
+```
+
+**macOS / Linux**
+
+```bash
+mkdir -p ~/.agents/skills
+git clone https://github.com/lyra81604/CPA-Skill.git \
+  ~/.agents/skills/cpa-tutor
+```
+
+也可以把它作为项目专用 skill，克隆到项目根目录的 `.agents/skills/cpa-tutor/`，这样该项目的协作者也能使用。
+
+安装后新开一个 Codex 会话。Codex 通常会自动发现新增或更新的 skill；若没有出现，请重启 Codex。使用时可以：
+
+- 显式调用：`$cpa-tutor 解释一下递延所得税`
+- 在 CLI / IDE 中输入 `/skills`，或键入 `$` 后选择 `cpa-tutor`
+- 直接提出 CPA 备考问题，由 Codex 根据 `description` 自动触发
+
+> 官方说明：[Agent Skills in Codex](https://developers.openai.com/codex/skills)。导入自己的讲义时仍需 Node.js；
+> `scripts/docx-to-text.js` 还会调用 `unzip`，Windows 用户需要另行安装可用的 `unzip` 命令，或先把 `.docx`
+> 转为纯文本后放进 `corpus/`。
 
 ### 💻 Claude Code（命令行）
 
