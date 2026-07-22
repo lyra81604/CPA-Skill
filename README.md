@@ -167,6 +167,38 @@ node scripts/docx-to-text.js "/path/to/你的税法讲义.docx" "corpus/tax-note
 当你要求 AI“记录本次进度 / 更新学习日志”时，本地版会使用追加式日志工具。请把日志放在你自己的持久目录，
 不要放进 skill 安装目录或临时分析目录：
 
+### 在 Codex App / CLI / IDE 中使用
+
+Codex 可以运行 skill 内置的日志脚本。推荐先打开一个长期保存的 CPA 学习目录作为工作区，例如
+`D:\CPA学习`，然后输入：
+
+```text
+使用 $cpa-tutor。把学习日志保存在当前工作区的 cpa-study-log 目录；以后我说“记日志”时，
+请使用追加式日志脚本写入，并在每次写入后运行 verify。
+```
+
+Codex 会从已安装的 `cpa-tutor` skill 目录读取 `scripts/study-log.js`，但把数据写到当前工作区：
+
+```text
+D:\CPA学习\cpa-study-log\
+├── events\          # 每条记录一个不可变 JSON，真正的历史数据
+├── backups\         # 最近 20 个汇总页备份
+└── study-log.md     # 可从 events/ 重建的阅读版
+```
+
+- 不要把日志写进 `~/.agents/skills/cpa-tutor/` 或项目的 `.agents/skills/`；更新/重装 skill 时这些目录可能变化。
+- 目标目录不在当前可写工作区时，Codex 可能请求文件写入授权；只需批准实际的日志目录。
+- Codex 云端任务或临时 worktree 中生成的日志，只有提交到私人仓库或同步到外部持久存储后才算真正保存。
+- GitHub 更新不会自动替换用户已安装的旧副本；需要在 skill 安装目录运行 `git pull` 或重新安装。
+
+Codex 官方说明：[Skills 支持 App / CLI / IDE，且可携带脚本](https://developers.openai.com/codex/skills)；
+[沙箱和工作区写入配置](https://developers.openai.com/codex/config-basic)。
+
+### 手动运行脚本
+
+下面的相对路径命令应在 `cpa-tutor` skill 仓库根目录运行；由 Codex 自动执行时，它会解析已安装 skill 中脚本的
+实际路径：
+
 ```bash
 node scripts/study-log.js status --dir "D:\CPA-data\cpa-study-log"
 node scripts/study-log.js append --dir "D:\CPA-data\cpa-study-log" --subject "经济法" --topic "票据法律制度" --summary "完成第九章第一单元练习" --result "20 题，错 3 题" --weak-points "提示付款期限、票据抗辩"
