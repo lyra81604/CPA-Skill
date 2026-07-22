@@ -43,6 +43,7 @@
   先出题让你做，再给分步解析，每个干扰项都点破"错在哪"。
 - ⏱️ **考情提醒**：各科考试时间、题型分布、法规截止口径（多数 2025-12-31；审计、增值税法 2026-01-31）。
 - 📥 **自主上传资料**：把你**自己合法持有**的教材/讲义导入 `corpus/`，讲解立刻贴合你在读的那本书。
+- 🧾 **防丢失学习日志**：每次记录单独追加，Markdown 汇总页可重建；写后自动核对旧记录是否完整。
 - 🔒 **不绑数据**：本仓库**不含任何 CPA 备考资料/教材**，资料完全由你自己提供（见下方版权声明）。
 
 ---
@@ -158,6 +159,26 @@ node scripts/docx-to-text.js "/path/to/你的税法讲义.docx" "corpus/tax-note
 1. ▶️ **直接呼出**：`/cpa-tutor 解释一下递延所得税`
 2. 🤖 **自动触发**：在备考语境里提问即可，例如"合并报表抵销看不懂"，或直接**粘贴一道题/一段教材**问"这题考啥"。
 3. 🧪 **出题巩固**：例如"给我出 3 道增值税应纳税额的练习题"。
+
+---
+
+## 🧾 防丢失学习日志 Study log
+
+当你要求 AI“记录本次进度 / 更新学习日志”时，本地版会使用追加式日志工具。请把日志放在你自己的持久目录，
+不要放进 skill 安装目录或临时分析目录：
+
+```bash
+node scripts/study-log.js status --dir "D:\CPA-data\cpa-study-log"
+node scripts/study-log.js append --dir "D:\CPA-data\cpa-study-log" --subject "经济法" --topic "票据法律制度" --summary "完成第九章第一单元练习" --result "20 题，错 3 题" --weak-points "提示付款期限、票据抗辩"
+node scripts/study-log.js verify --dir "D:\CPA-data\cpa-study-log"
+```
+
+- `events/*.json` 是不可变的历史事实；`study-log.md` 只是自动生成的阅读版，误改后可用 `rebuild` 恢复。
+- 旧版只有一个 Markdown 日志时，用 `import-markdown` 迁移，切勿直接初始化并覆盖。
+- Claude.ai / 普通聊天若没有真实的持久文件权限，只能生成日志文本；请下载到本地或云盘。Artifact 可先从版本
+  选择器找回旧版本，但仍建议保留外部备份。
+
+完整流程见 [`references/study-log.md`](references/study-log.md)。
 
 ---
 
@@ -313,7 +334,7 @@ cpa-tutor/
 ├── 📄 SKILL.md                       # 技能主文件（辅导风格、三件事、诚实原则）
 ├── 📄 README.md
 ├── 📄 LICENSE                        # MIT（仅限技能代码，不含任何备考资料）
-├── 🚫 .gitignore                     # 屏蔽 corpus 与上传的源文件
+├── 🚫 .gitignore                     # 屏蔽 corpus、学习日志与上传的源文件
 ├── 📁 syllabus/                      # 内置 2026 CPA 官方大纲全文（公开文件，随 skill 分发）
 │   ├── 01-accounting.txt             # 会计
 │   ├── 02-audit.txt                  # 审计
@@ -324,9 +345,11 @@ cpa-tutor/
 │   └── 07-comprehensive.txt          # 综合阶段（职业能力综合测试）
 ├── 📁 references/
 │   ├── curriculum-map.md             # 考试结构、各科章节/高频考点、能力等级、题型、复习建议
-│   └── question-style.md             # 各科真实题型 + 怎么出"像真考试"的练习题
+│   ├── question-style.md             # 各科真实题型 + 怎么出"像真考试"的练习题
+│   └── study-log.md                  # 追加式日志、迁移、验证与故障恢复流程
 ├── 📁 scripts/
-│   └── docx-to-text.js               # 把 .docx 转成可搜索文本（导入讲义 / 刷新大纲）
+│   ├── docx-to-text.js               # 把 .docx 转成可搜索文本（导入讲义 / 刷新大纲）
+│   └── study-log.js                  # 防丢失的追加式学习日志工具
 ├── 📁 portable/                      # 在其他 AI（ChatGPT/Gemini/Kimi/Cursor…）上使用
 │   ├── SYSTEM_PROMPT.md              # 工具中性、自包含的系统提示
 │   └── DEPLOY.md                     # 各平台部署步骤

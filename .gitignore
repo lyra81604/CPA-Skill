@@ -2,6 +2,9 @@
 # corpus/ 是用户本地合法持有的 CPA 教材/讲义文本，每个用户在本地自行导入。
 corpus/*.txt
 
+# 用户本地学习日志（由 scripts/study-log.js 生成，不随 skill 分发）
+cpa-study-log/
+
 # 源 Word/PDF 资料（可能含受版权保护的教材）
 *.docx
 *.pdf
